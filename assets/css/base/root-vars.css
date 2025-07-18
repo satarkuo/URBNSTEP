@@ -19,11 +19,12 @@
   --danger-300: #d74f4f;
 }
 /* text */
-.text-white {
-  color: var(--neutral-000);
-}
+
 .text-primary-400 {
   color: var(--primary-400);
+}
+.text-neutral-000 {
+  color: var(--neutral-000);
 }
 .text-neutral-500 {
   color: var(--neutral-500);
