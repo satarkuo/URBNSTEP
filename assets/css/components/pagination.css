@@ -1,0 +1,13 @@
+.pagination .page-item .btn {
+  padding: 8px 15px;
+  border-radius: 0;
+  font-weight: 400;
+}
+.pagination .page-item .btn.active {
+  background-color: var(--primary-300);
+  font-weight: 500;
+}
+.pagination .page-item .btn.disabled:hover {
+  background: none;
+  cursor: default;
+}

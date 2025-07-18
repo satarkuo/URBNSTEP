@@ -1,0 +1,33 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.btn-dark {
+  background-color: var(--neutral-900);
+  color: var(--neutral-000);
+}
+.btn-light {
+  border: 1px solid var(--neutral-900);
+}
+.btn-light:hover {
+  background-color: var(--neutral-900);
+  color: var(--neutral-000);
+}
+.btn-favorite .bi-heart-fill {
+  display: none;
+}
+.btn-favorite.active .bi-heart-fill {
+  display: inline-block;
+}
+.btn-favorite.active .bi-heart {
+  display: none;
+}

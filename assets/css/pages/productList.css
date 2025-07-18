@@ -1,0 +1,4 @@
+.category .category-link.active,
+.category .category-link:hover {
+  color: var(--primary-400);
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URBNSTEP | 商品列表</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/pages/productList.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <main class="container py-32 mb-48">
+      <!-- breadcrumb -->
+      <nav class="mb-24">
+        <ol class="d-flex">
+          <li class="breadcrumb-item">
+            <a href="index.html" class="breadcrumb-link">首頁</a>
+          </li>
+          <li class="breadcrumb-item">所有商品</li>
+        </ol>
+      </nav>
+      <h1 class="h3 mb-24">所有商品</h1>
+      <div class="row">
+        <!-- category -->
+        <div class="col-2">
+          <nav>
+            <ul class="category">
+              <li class="mb-16">
+                <a href="#" class="py-8 category-link active">所有商品</a>
+              </li>
+              <li class="mb-16">
+                <a href="#" class="py-8 category-link">慢跑鞋</a>
+              </li>
+              <li class="mb-16">
+                <a href="#" class="py-8 category-link">滑板鞋</a>
+              </li>
+              <li class="mb-16">
+                <a href="#" class="py-8 category-link">厚底鞋</a>
+              </li>
+              <li class="mb-16">
+                <a href="#" class="py-8">限定 / 聯名企劃</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-10">
+          <!-- product list 下方JS渲染產品卡片 -->
+          <div class="row productList"></div>
+          <!-- pagination -->
+          <ul class="d-flex justify-center align-center pagination">
+            <li class="me-12 page-item">
+              <button type="button" class="btn disabled" disabled>
+                <i class="bi bi-chevron-left"></i>
+              </button>
+            </li>
+            <li class="me-8 page-item">
+              <button type="button" class="btn active">1</button>
+            </li>
+            <li class="me-8 page-item">
+              <button type="button" class="btn">2</button>
+            </li>
+            <li class="me-8 page-item">
+              <button type="button" class="btn">3</button>
+            </li>
+            <li class="me-8 page-item">...</li>
+            <li class="me-8 page-item">
+              <button type="button" class="btn">10</button>
+            </li>
+            <li class="page-item">
+              <button type="button" class="btn">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <div class="bg-primary-200 d-flex justify-center align-center py-24 mt-48">
+      <p class="h4 me-24">加入會員取得 9 折優惠</p>
+      <button type="button" class="btn btn-dark">馬上註冊</button>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+      const products = [
+        {
+          imgUrl: "assets/images/productList/product.png",
+          imgAlt: "PLATFORM 404",
+          title: "PLATFORM 404",
+          price: "2,600",
+        },
+        {
+          imgUrl: "assets/images/productList/product-1.png",
+          imgAlt: "PLATFORM 404",
+          title: "PLATFORM 404",
+          price: "2,600",
+        },
+        {
+          imgUrl: "assets/images/productList/product-2.png",
+          imgAlt: "VM001",
+          title: "VM001",
+          price: "2,600",
+        },
+        {
+          imgUrl: "assets/images/productList/product-3.png",
+          imgAlt: "Melty Kiss",
+          title: "Melty Kiss",
+          price: "4,000",
+        },
+        {
+          imgUrl: "assets/images/productList/product-4.png",
+          imgAlt: "BOOMBLOK",
+          title: "BOOMBLOK",
+          price: "3,200",
+        },
+        {
+          imgUrl: "assets/images/productList/product-5.png",
+          imgAlt: "BOOMBLOK",
+          title: "BOOMBLOK",
+          price: "3,200",
+        },
+        {
+          imgUrl: "assets/images/productList/product-6.png",
+          imgAlt: "R:UNER",
+          title: "R:UNER",
+          price: "4,000",
+        },
+        {
+          imgUrl: "assets/images/productList/product-7.png",
+          imgAlt: "Sugar Snap",
+          title: "Sugar Snap",
+          price: "4,000",
+        },
+        {
+          imgUrl: "assets/images/productList/product-8.png",
+          imgAlt: "Neofoam",
+          title: "Neofoam",
+          price: "4,000",
+        },
+      ];
+
+      function renderProductList(products) {
+        console.log("test");
+        const productList = document.querySelector(".productList");
+        const listHTML = products
+          .map((product, i) => {
+            return `<div class="col-4 item${i + 1}">
+              <div class="productCard mb-48">
+                <a href="product.html">
+                  <img
+                    src=${product.imgUrl}
+                    alt=${product.title}
+                    class="mb-12"
+                  />
+                  <h2 class="h6 mb-4">${product.title}</h2>
+                  <p>NT$${product.price}</p>
+                </a>
+              </div>
+            </div>`;
+          })
+          .join("");
+        productList.innerHTML = listHTML;
+      }
+      renderProductList(products);
+    </script>
+    <!--載入 jQuery 讓 all.js 使用-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/all.js"></script>
+  </body>
+</html>
