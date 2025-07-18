@@ -135,6 +135,12 @@
 .pt-32 {
   padding-top: 32px;
 }
+.pt-48 {
+  padding-top: 48px;
+}
+.m-auto {
+  margin: 0 auto;
+}
 /* margin left */
 .ms-8 {
   margin-left: 8px;

@@ -1,0 +1,22 @@
+.banner {
+  background: url(/assets/images/brandStory/hero.png) center no-repeat;
+  background-size: cover;
+  padding: 125px 0;
+}
+.historyList li {
+  list-style-type: disc;
+  text-align: justify;
+}
+.conceptList li {
+  border-left: 3px solid var(--neutral-300);
+}
+.storyList li a {
+  display: inline-block;
+  color: var(--primary-400);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+.storyList li a .bi {
+  float: left;
+  font-size: 20px;
+}
